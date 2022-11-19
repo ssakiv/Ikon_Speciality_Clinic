@@ -308,6 +308,14 @@ body {
   margin-top: 20rem;
 }
 
+/* .card {
+  margin: 20px 40px;
+} */
+
+/* .home_carousel_testimonials {
+  margin-top: 24px;
+} */
+
 .home_cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -364,6 +372,7 @@ body {
 }
 
 /* HOME PAGE CARDS ENDS*/
+
 /* FOOTER SECTION STARTS */
 footer {
   background: #101010;

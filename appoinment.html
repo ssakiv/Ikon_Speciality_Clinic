@@ -7,8 +7,7 @@
     <title>Ikon Speciality Clinic</title>
     <link rel="icon" href="images/logo.png" type="image/icon type" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/servicescss.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/services.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/appointment.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -24,51 +23,184 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js"
     />
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
-  <header>
-    <section  id="title">
-      <!-- Navbar -->
-<nav class="navbar navbar-expand-lg  bg-light navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="index.html"
-      ><img
-        id="MDB-logo"
-        src="images/logo.png"
-        alt="Logo"
-        draggable="false"
-        height="150"
-        width="150"
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="index.html"><i class="fas fa-home pe-2"></i>Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="about.html"><i class="fas fa-bell pe-2"></i>About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="services.html"><i class="fas fa-bars pe-2"></i>Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="contact.html"><i class="fas fa-phone-alt pe-2"></i>Contact</a>
-        </li>
-        <li class="nav-item ms-3">
-          <a class="btn btn-outline-dark btn-rounded" href="appoinment.html">Book an Appointment</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Navbar -->
+
+  <body>
+    <header>
+      <section id="title">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-light navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                id="MDB-logo"
+                src="images/logo.png"
+                alt="Logo"
+                draggable="false"
+                height="150"
+                width="150"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="index.html"
+                    ><i class="fas fa-home pe-2"></i>Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="about.html"
+                    ><i class="fas fa-bell pe-2"></i>About us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="services.html"
+                    ><i class="fas fa-bars pe-2"></i>Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="contact.html"
+                    ><i class="fas fa-phone-alt pe-2"></i>Contact</a
+                  >
+                </li>
+                <li class="nav-item ms-3">
+                  <a
+                    class="btn btn-outline-dark btn-rounded"
+                    href="appoinment.html"
+                    >Book an Appointment</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar -->
+      </section>
+    </header>
+    <section class="appointment_flex_container">
+      <div class="appointment_flex_item_left">
+        <img src="images/tree.jpg" />
+      </div>
+      <div class="appointment_flex_item_right">
+        <h2>Book an Appointment</h2>
+
+        <form method="POST" name="google-sheet" class="appointment_form">
+          <label for="name">Your Name</label>
+          <input type="text" id="fname" name="Name" placeholder="" />
+
+          <label for="mobile">Mobile</label>
+          <input type="text" id="lname" name="Mobile" placeholder="" />
+
+          <label for="date" class="appointment_date">Preferred Date</label>
+          <input type="date" id="lname" name="Date" placeholder="" />
+
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="Time" placeholder="" />
+
+          <h4>How did you know about us</h4>
+          <label class="appointment_checkbox_container">
+            <input type="checkbox" name="Google" />
+            <span class="appointment_checkmark"></span>
+            Google</label
+          >
+          <label class="appointment_checkbox_container">
+            <input type="checkbox" name="Instagram" />
+            <span class="appointment_checkmark"></span>
+            Instagram</label
+          >
+          <label class="appointment_checkbox_container">
+            <input type="checkbox" name="Facebook" />
+            <span class="appointment_checkmark"></span>
+            Facebook</label
+          >
+          <label class="appointment_checkbox_container">
+            <input type="checkbox" name="Referrals" />
+            <span class="appointment_checkmark"></span>
+            Referrals</label
+          >
+          <label class="appointment_checkbox_container">
+            <input type="checkbox" name="Other" />
+            <span class="appointment_checkmark"></span>
+            Other
+          </label>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
+          ></div>
+          <input
+            type="submit"
+            value="Submit"
+            name="submit"
+            onclick="submitForm()"
+          />
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer_flex_container">
+      <div class="footer_flex_item_left">
+        <img src="images/logo2.png" alt="" />
+        <p>
+          Maxx Dental care amis to provide holistic and the best quality
+          treatment for all patients. We being a patient centric dental
+          establishment, our focus primarily is patient comfort and treatment
+          needs. Our team of experts ensure that all procedures are carried out
+          meticulously.
+        </p>
+      </div>
+      <div class="footer_flex_item_right">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Book an Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer_flex_item_right">
+        <h3>Reach Us</h3>
+        <div class="footer_icons">
+          <i class="fas fa-m fa-location-arrow" style="color: #fff"></i>
+          <span>
+            No.1, Gopal Street, 1st Floor, 100 Feet Taramani Link Road,
+            Velachery, Chennai - 600 042
+          </span>
+        </div>
+        <div class="footer_icons">
+          <i class="fas fa-phone-alt fa-m" style="color: #fff"></i>
+          <span> 1234567890 </span>
+        </div>
+        <div class="footer_icons">
+          <i class="fas fa-envelope fa-m" style="color: #fff"></i>
+          <span> temp@gmail.com </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbydCuxfjP-6m-1vHVRk6mnA0AvEf7HejmEhfwzUIx0JtjkC2Q5Yyl90TacRGhp3GL2B9g/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("Your Appointment has been fixed"))
+          .catch((error) => alert("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
