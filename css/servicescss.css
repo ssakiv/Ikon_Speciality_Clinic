@@ -1,6 +1,6 @@
 .column {
     float: left;
-    width: 50%;
+    width: 40%;
   }
   
   /* Clear floats after the columns */
@@ -15,5 +15,11 @@
   }
   
   .column {
-    flex: 50%;
+    flex: 40%;
   }
+
+  .section_service_appoinment{
+    margin-top: 50px;
+  }
+
+  

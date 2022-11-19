@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .navbar_class {
+    height: 50px;
+    width: 100%;
+    background-color: #456;
+    position: relative;
+  }
+  
+  .navbar_class > .nav_header {
+    display: inline;
+  }
+  
+  .navbar_class > .nav_header > .nav_title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .navbar_class > .nav_btn {
+    display: none;
+  }
+  
+  .navbar_class > .nav_links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .navbar_class > .nav_links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .navbar_class > .nav_links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar_class > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .navbar_class > .nav_btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .navbar_class > .nav_btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .navbar_class > .nav_btn > label:hover,.nav  #nav_check:checked ~ .nav_btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar_class> .nav_btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .navbar_class > .nav_links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .navbar_class > .nav_links > a {
+      display: block;
+      width: 100%;
+    }
+    .navbar_class > #nav-check:not(:checked) ~ .nav_links {
+      height: 0px;
+    }
+    .navbar_class > #nav-check:checked ~ .nav_links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
