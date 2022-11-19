@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/logo.png" type="image/icon type" />
     <link rel="stylesheet" type="text/css" href="css/contact_styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -69,45 +70,120 @@
   <body>
     <div class="contact_flex_container">
       <div class="contact_flex_item_left">
-        <div class="contact_icons">
+        <div class="contact_icons first_icon">
           <i class="fas fa-m fa-location-arrow" style="color: #000"></i>
           <span>
             No.1, Gopal Street, 1st Floor, 100 Feet Taramani Link Road,
-            Velachery, Chennai - 600 042
+            Velachery, Chennai - 600042
           </span>
         </div>
         <div class="contact_icons">
           <i class="fas fa-phone-alt fa-m" style="color: #000"></i>
           <span> 1234567890 </span>
         </div>
-        <div class="contact_icons">
+        <div class="contact_icons email">
           <i class="fas fa-envelope fa-m" style="color: #000"></i>
           <span> temp@gmail.com </span>
         </div>
+        <div class="social_icons">
+          <a href="">
+          <i class="fab fa-facebook fa-2x" style="color: #000">
+          </i></a>
+          <a href="">
+          <i class="fab fa-instagram fa-2x" style="color: #000"></i>
+          </a>
+          <a href="">
+          <i class="fab fa-youtube fa-2x" style="color: #000"></i>
+          </a>
+        </div>
       </div>
-      <div class="contact_flex_item_right">2</div>
-    </div>
-    <section>
-      <div>
+      <div class="contact_flex_item_right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.11675413503!2d80.06892455519923!3d13.047487785678227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1668793263514!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
-        <form>
-          <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+      </div>
+    </div>
+
+    <!--QUERIES SECTION-->
+    <section>
+      <div class="queries">
+        <h2>Have Any Queries?</h2>
+        <h5>Just give us a Call or submit the form below</h5>
+        <form method="POST" name="google-sheet">
+          <div class="form-group grp1">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" class="form-control" id="formGroupExampleInput" placeholder="Name">
           </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Email</label>
-            <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+          <div class="form-group grp1">
+            <label for="email">Email</label>
+            <input type="email" name="Email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
             <div class="form-group">
-              <label for="formGroupExampleInput2">Number</label>
-              <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Number">
+              <label for="mobile">Mobile</label>
+              <input type="number" class="form-control" id="formGroupExampleInput2" name="Mobile" placeholder="Number">
             <div class="form-group">
-                <label for="formGroupExampleInput2">Message</label>
-                <input type="textarea" class="form-control" id="formGroupExampleInput2" placeholder="Text">
-                <button type="submit" class="btn btn-primary">submit</button>
-          </div>
+                <label for="message">Message</label>
+                <input type="textarea" class="form-control" id="formGroupExampleInput2" name="Message" placeholder="Text">
+            </div>
+            <input type="submit" 
+            value="Submit"
+            name="submit" 
+            onclick="submitForm()"
+            />
         </form>
       </div>
     </section>
+
+    <footer class="footer_flex_container">
+      <div class="footer_flex_item_left">
+        <img src="images/logo2.png" alt="" />
+        <p>
+          Maxx Dental care amis to provide holistic and the best quality
+          treatment for all patients. We being a patient centric dental
+          establishment, our focus primarily is patient comfort and treatment
+          needs. Our team of experts ensure that all procedures are carried out
+          meticulously.
+        </p>
+      </div>
+      <div class="footer_flex_item_right">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Book an Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer_flex_item_right">
+        <h3>Reach Us</h3>
+        <div class="footer_icons">
+          <i class="fas fa-m fa-location-arrow" style="color: #fff"></i>
+          <span>
+            No.1, Gopal Street, 1st Floor, 100 Feet Taramani Link Road,
+            Velachery, Chennai - 600 042
+          </span>
+        </div>
+        <div class="footer_icons">
+          <i class="fas fa-phone-alt fa-m" style="color: #fff"></i>
+          <span> 1234567890 </span>
+        </div>
+        <div class="footer_icons">
+          <i class="fas fa-envelope fa-m" style="color: #fff"></i>
+          <span> temp@gmail.com </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwJDMungYKQ88hfvrBVhPSv-pTZZSeMXFMaNQeFDnT-2meuY_k1l2oanupY8Wd51TpV/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("Your Appointment has been fixed"))
+          .catch((error) => alert("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
